@@ -3,7 +3,7 @@ fmm --ubodt ubodt.txt --network ./edges.shp --gps ./trips.shp  --radius 0.4 --er
 stmatch --network ./edges.shp --gps ./trips.shp -r 0.0027 -e 0.0004 --output stmr.txt
 
 fix
-7 drift, missing
+7 drift, 261636 missing
 
 FMM
 [info][fmm_app.cpp:75 ] MM process finished
