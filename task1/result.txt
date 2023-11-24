@@ -1,0 +1,16 @@
+ubodt_gen --network ./edges.shp --output ubodt.txt --delta 0.216 --use_omp
+fmm --ubodt ubodt.txt --network ./edges.shp --gps ./trips.shp  --radius 0.4 --error 0.0016  --output fmmr.txt  --output_fields all --use_omp
+stmatch --network ./edges.shp --gps ./trips.shp -r 0.0027 -e 0.0004 --output stmr.txt
+
+fix
+7 drift, missing
+
+FMM
+[info][fmm_app.cpp:75 ] MM process finished
+[info][fmm_app.cpp:79 ] Time takes 293.091
+[info][fmm_app.cpp:80 ] Time takes excluding input 293.081
+[info][fmm_app.cpp:81 ] Finish map match total points 511365 matched 503108
+[info][fmm_app.cpp:83 ] Matched percentage: 0.983853
+[info][fmm_app.cpp:84 ] Point match speed: 1716.56
+[info][fmm_app.cpp:85 ] Point match speed (excluding input): 1716.62
+[info][fmm_app.cpp:87 ] Time takes 293.091
