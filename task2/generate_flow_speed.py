@@ -66,6 +66,8 @@ def generate_features(fmm_result, trajs, num_roads=38027):
     for traj_id in fmm_result.keys():
         cpath = fmm_result[traj_id]
         traj = trajs[traj_id]
+        print(len(traj))
+        print(len(cpath))
         for i in range(len(traj)):
             (x,y,time,speed) = traj[i]
             date = datetime.fromtimestamp(time)
