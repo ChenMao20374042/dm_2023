@@ -81,7 +81,7 @@ python generate_eta_task_data.py
 'highway','lanes','tunnel','bridge','alley','roundabout','length','maxspeed','width','flow_day','flow_hout','speed_day','speed_hour'
 ```
 
-其中，最后6个特征分别进行了标准化。经过实验，模型只使用后6个特征即可。
+其中，最后6个特征分别进行了标准化。
 
 ### 3.2 模型训练
 
@@ -97,5 +97,23 @@ python train_eta.py
 python dump_eta_task_result.py
 ```
 
-**模型在验证集上的平均绝对误差（MAE）为227.82秒，平均相对误差（MAPE）为22.40%。**
+**模型在验证集上的平均绝对误差（MAE）为221.16秒，平均相对误差（MAPE）为21.56%。**
+
+## 任务4 下一跳预测
+
+我们基于LSTM模型完成下一跳预测任务。
+
+### 4.1 模型训练
+进入`./task4/`目录后，通过下面的命令来训练模型。
+
+```
+python model_train.py
+```
+
+### 4.2 结果导出
+完成训练后，在`./task4/`目录下通过下面的命令来导出下一跳预测结果。
+```
+python jump_predict.py 
+```
+
 
